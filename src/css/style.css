@@ -1,0 +1,165 @@
+/* General */
+:root {
+  --bg-color: rgb(255, 247, 212);
+}
+
+/* :not(h1 ) {
+  background-color: var(--bg-color) !important;
+} */
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.type-font {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color);
+  height: 9vh;
+  width: 100%;
+  position: fixed;
+  font-size: large;
+  font-weight: 300;
+  box-shadow: 0 0 1rem rgb(76, 61, 61, 0.2);
+}
+
+.nav-link.active {
+  color: rgb(254, 185, 20) !important;
+  font-weight: 100;
+}
+
+.navbar-brand {
+  color: rgb(76, 61, 61);
+  padding-left: 3vh;
+}
+
+.nav-item {
+  padding: 0.3rem;
+}
+
+.nav-item a {
+  color: rgb(76, 61, 61);
+}
+
+/* Home Page */
+.home-page-container {
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100%;
+}
+
+.fill-box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-size: 10vh;
+  font-weight: 500;
+  /* text-shadow: 0 0.1rem 0.3rem rgba(188, 149, 29, 0.5); */
+  padding: 1rem 0;
+}
+
+.text-small {
+  font-size: 1.6vh;
+  font-weight: 200;
+}
+
+/* This Website */
+.this-website-container {
+  background-color: rgb(255, 217, 90);
+}
+
+.moon {
+  width: 75%;
+}
+
+.header2 {
+  font-size: 7vh;
+  font-weight: 200;
+  padding: 1rem 0;
+}
+
+.text-box {
+  width: 60%;
+}
+
+.text-med-small {
+  font-size: 1.7vh;
+  font-weight: 200;
+}
+
+/* Fixed Background */
+.fixed {
+  position: fixed;
+  background-image: url("../../assets/sunset-background-edited.png");
+  z-index: -999 !important;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.fixed-background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000 !important;
+  overflow: hidden;
+}
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999 !important;
+}
+
+/* Footer */
+footer .container-fluid {
+  background-color: rgb(76, 61, 61);
+  height: 23vh;
+}
+
+footer p {
+  color: rgb(255, 247, 212);
+  padding-top: 4vh;
+}
+
+footer ul {
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+}
+
+footer li {
+  padding: 0 2vh;
+  font-size: 3vh;
+}
+
+footer .btn {
+  color: rgb(255, 247, 212);
+  font-size: 4vh;
+}
+
+footer .btn:hover,
+footer .btn:active {
+  color: rgb(255, 217, 90) !important;
+}

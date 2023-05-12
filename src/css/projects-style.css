@@ -14,6 +14,7 @@
 /* General */
 body {
   font-family: var(--font);
+  background-color: var(--d-navy);
 }
 
 .container-fluid {
@@ -23,8 +24,7 @@ body {
 .page {
   height: 100vh;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 section {
@@ -100,12 +100,14 @@ section {
   grid-area: 3 / 2 / span 1 / span 1;
   border-radius: 20px;
   padding: 1rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.279);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.279);
 }
 
 .card-1 {
   background-color: var(--navy);
   border: 6px solid var(--navy);
+  transition-delay: 600ms !important;
+  transition-timing-function: ease-out;
 }
 
 .card-2 {
@@ -115,7 +117,8 @@ section {
   position: relative;
   top: 0.5rem;
   right: 0.7rem;
-  transition-delay: 150ms !important;
+  transition-delay: 750ms !important;
+  transition-timing-function: ease-in;
 }
 
 .card-3 {
@@ -125,7 +128,8 @@ section {
   position: relative;
   top: 1rem;
   right: 1.4rem;
-  transition-delay: 300ms !important;
+  transition-delay: 950ms !important;
+  transition-timing-function: ease-in;
 }
 
 .card img {
@@ -147,63 +151,74 @@ section {
 }
 
 .one h6 {
-  transition-delay: 300ms;
+  transition-delay: 100ms !important;
+  transition: all 0.5s;
 }
 
 .one hr {
   margin: 1.5rem 0;
-  transition-delay: 1200ms;
+  transition-delay: 500ms !important;
+  transition: all 0.5s;
 }
 
 .one p {
   font-size: 1rem;
-  transition-delay: 300ms;
+  transition-delay: 100ms !important;
+  transition: all 0.5s;
 }
 
 /* Page Two */
 .two {
-  background-color: var(--cyan) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 /* Page Three */
 .three {
-  background-color: var(--gray);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 /* Page Four  */
 .four {
-  background-color: var(--d-gray);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 /* Animations */
+.hidden-left-sm {
+  opacity: 0;
+  transform: translateX(-0.7rem);
+  filter: blur(2px);
+}
+
+.hidden-right-sm {
+  opacity: 0;
+  transform: translateX(0.7rem);
+  filter: blur(2px);
+}
+
 .hidden-left {
   opacity: 0;
-  transform: translateX(-120%);
+  transform: translateX(10%);
   filter: blur(2px);
-  transition: all 1s;
 }
 
 .hidden-right {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(10%);
   filter: blur(2px);
-  transition: all 1s;
 }
 
 .show {
   opacity: 1;
   transform: translateX(0);
   filter: blur(0);
+  transition: all 0.5s;
 }

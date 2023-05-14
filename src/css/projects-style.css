@@ -15,6 +15,7 @@
 body {
   font-family: var(--font);
   background-color: var(--d-navy);
+  user-select: none;
 }
 
 .container-fluid {
@@ -101,6 +102,7 @@ section {
   grid-area: 3 / 2 / span 1 / span 1;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.279);
   overflow: hidden;
+  border: none;
 }
 
 .card:hover > img {
@@ -123,29 +125,52 @@ section {
 .card-1 {
   background-color: var(--navy);
   transition-delay: 600ms !important;
-  transition-timing-function: ease-out;
 }
 
 .card-2 {
   background-color: var(--gray);
-  height: 100%;
-  position: relative;
-  top: 0.5rem;
-  right: 0.7rem;
   transition-delay: 750ms !important;
-  transition-timing-function: ease-in;
-  pointer-events: none;
 }
 
 .card-3 {
   background-color: var(--d-gray);
-  height: 100%;
+  transition-delay: 900ms !important;
+}
+
+.front-card {
+  z-index: 3;
+  transition-timing-function: ease-out;
+}
+
+.middle-card {
+  position: relative;
+  top: 0.5rem;
+  right: 0.7rem;
+  z-index: 2;
+  transition-timing-function: ease-in;
+  pointer-events: none;
+}
+
+.back-card {
   position: relative;
   top: 1rem;
   right: 1.4rem;
-  transition-delay: 950ms !important;
+  z-index: 1;
   transition-timing-function: ease-in;
   pointer-events: none;
+}
+
+.no-delay {
+  transition-delay: 0ms !important;
+  transition: all 0s !important;
+}
+
+.short-delay {
+  transition-delay: 150ms !important;
+}
+
+.long-delay {
+  transition-delay: 300ms !important;
 }
 
 .card img {
@@ -258,46 +283,8 @@ section {
   transition: all 0.5s;
 }
 
-.card-back {
-  animation: card-to-back 1s forwards;
-}
-
-.card-forward {
-  animation: move-card-up 1s forwards;
-}
-
-.card-front {
-  animation: move-card-up-again 1s forwards;
-}
-
-@keyframes card-to-back{
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(0.7rem) translateY(-0.5rem);
-  } 
-  100% {
-    transform: translateX(-1.4rem) translateY(1rem);
-  }
-}
-
-@keyframes move-card-up{
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    transform: translateX(0.7rem) translateY(-0.5rem);
-    z-index: 100;
-  }
-}
-
-@keyframes move-card-up-again{
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    transform: translateX(0.7rem) translateY(-0.5rem);
-    z-index: 101;
-  }
+.hide-card {
+  opacity: 0;
+  transform: translateX(0.7rem);
+  filter: blur(2px);
 }

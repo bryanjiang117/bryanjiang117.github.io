@@ -12,6 +12,9 @@ const observer = new IntersectionObserver(
         entry.target.classList.add("show");
       } else {
         entry.target.classList.remove("show");
+        if (entry.target.classList.contains("card")) {
+          resetCard(entry.target);
+        }
       }
     });
   },
@@ -25,29 +28,60 @@ const hiddenElements = document.querySelectorAll(
 hiddenElements.forEach((el) => observer.observe(el));
 
 function moveCard() {
-  
-  var cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll(".card");
   for (let i = 0; i < 3; i++) {
-    const card = cards[i];
-    const classList = card.classList;
-    if (classList.contains("card-back")) {
-      classList.remove("card-back");
-      classList.add("card-forward");
-    } else if (classList.contains("card-forward")) {
-      classList.remove("card-forward");
-      classList.add("card-front");
-    } else if (classList.contains("card-front")) {
-      classList.remove("card-front");
-      classList.add("card-back");
-    } else if (card.id == "card1") {
-      classList.add("card-back");
-    } else if (card.id == "card2") {
-      classList.add("card-front");
-    } else if (card.id == "card3") {
-      classList.add("card-forward");
-    } else {
-      alert("error");
+    const classList = cards[i].classList;
+    classList.remove("short-delay");
+    classList.remove("long-delay");
+    classList.add("no-delay");
+    if (classList.contains("front-card")) {
+      classList.remove("front-card");
+      classList.add("back-card");
+      classList.remove("show");
+      classList.add("hide-card");
+    } else if (classList.contains("middle-card")) {
+      classList.remove("middle-card");
+      classList.add("front-card");
+    } else if (classList.contains("back-card")) {
+      classList.remove("back-card");
+      classList.add("middle-card");
+      classList.remove("show");
+      classList.add("hide-card");
     }
+  }
+  setTimeout(spreadCards, 100);
+}
+
+function spreadCards() {
+  const cards = document.querySelectorAll(".card");
+  for (let i = 0; i < 3; i++) {
+    const classList = cards[i].classList;
+    classList.remove("no-delay");
+    if (classList.contains("middle-card")) {
+      classList.add("short-delay");
+      classList.remove("hide-card");
+      classList.add("show");
+    } else if (classList.contains("back-card")) {
+      classList.add("long-delay");
+      classList.remove("hide-card");
+      classList.add("show");
+    }
+  }
+}
+
+function resetCard(card) {
+  classList = card.classList;
+  classList.remove("front-card");
+  classList.remove("middle-card");
+  classList.remove("back-card");
+  classList.remove('short-delay');
+  classList.remove('long-delay');
+  if (classList.contains("card-1")) {
+    classList.add("front-card");
+  } else if (classList.contains("card-2")) {
+    classList.add("middle-card");
+  } else if (classList.contains('card-3')) {
+    classList.add("back-card");
   }
 }
 

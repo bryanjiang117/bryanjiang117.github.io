@@ -92,13 +92,11 @@
     <div class="container-fluid page">
       <section class="one">
         <div class="container-fluid grid">
-          <div class="card card-3 hidden-right-sm" id="card3" onclick="moveCard()">
-            <img src="/assets/simplistic-design-inspiration.png" alt="" />
-          </div>
-          <div class="card card-2 hidden-right-sm" id="card2" onclick="moveCard()">
-            <img src="/assets/simplistic-design-inspiration.png" alt="" />
-          </div>
-          <div class="card card-1 hidden-right" id="card1" onclick="moveCard()">
+          <div
+            class="card card-3 back-card hidden-right-sm"
+            id="card3"
+            onclick="moveCard()"
+          >
             <div class="corner">
               <div class="arrow">
                 <i class="fa-solid fa-share"></i>
@@ -106,6 +104,33 @@
             </div>
             <img src="/assets/simplistic-design-inspiration.png" alt="" />
           </div>
+
+          <div
+            class="card card-2 middle-card hidden-right-sm"
+            id="card2"
+            onclick="moveCard()"
+          >
+            <div class="corner">
+              <div class="arrow">
+                <i class="fa-solid fa-share"></i>
+              </div>
+            </div>
+            <img src="/assets/simplistic-design-inspiration.png" alt="" />
+          </div>
+
+          <div
+            class="card card-1 front-card hidden-right-sm"
+            id="card1"
+            onclick="moveCard()"
+          >
+            <div class="corner">
+              <div class="arrow">
+                <i class="fa-solid fa-share"></i>
+              </div>
+            </div>
+            <img src="/assets/simplistic-design-inspiration.png" alt="" />
+          </div>
+
           <div class="title">
             <h6 class="me-1 hidden-right">
               a project for the school gaming club

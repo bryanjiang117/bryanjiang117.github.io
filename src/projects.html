@@ -44,115 +44,136 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Navbar -->
-    <nav
-      class="navbar sticky-top navbar-expand-sm"
-      id="navbar"
-      onclick="navbarColor"
-    >
-      <div class="container-fluid">
-        <div class="navbar-brand">
-          <a href="home.html">
-            <i class="fa-solid fa-code"></i>
-          </a>
-        </div>
+    <div class="full-container">
+      <div class="container-fluid page" id="page">
+        <section class="one">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-sm" onclick="navbarColor">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="home.html">
+                  <i class="fa-solid fa-code"></i>
+                </a>
+              </div>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarAction"
-        >
-          <span class="navbar-toggle-icon"></span>
-        </button>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarAction"
+              >
+                <span class="navbar-toggle-icon"></span>
+              </button>
 
-        <div class="collapse navbar-collapse" id="navbarAction">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="projects.html" class="nav-link active">projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="art.html" class="nav-link">art</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="music.html" class="nav-link">music</a>
-            </li>
-            <li class="nav-item">
-              <a href="athletics.html" class="nav-link">athletics</a>
-            </li>
-            <li class="nav-item">
-              <a href="games.html" class="nav-link">games</a> 
-            </li>-->
-          </ul>
-        </div>
+              <div class="collapse navbar-collapse" id="navbarAction">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="projects.html" class="nav-link active">projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="art.html" class="nav-link">art</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- End of Navbar -->
+
+          <div class="container-fluid grid">
+            <div
+              class="card card-one card-3 back-card hidden-right-sm"
+              id="card3"
+              onclick="moveCard()"
+            >
+              <div class="corner">
+                <div class="arrow">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
+              <img src="/assets/simplistic-design-inspiration.png" alt="" />
+            </div>
+
+            <div
+              class="card card-one card-2 middle-card hidden-right-sm"
+              id="card2"
+              onclick="moveCard()"
+            >
+              <div class="corner">
+                <div class="arrow">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
+              <img src="/assets/simplistic-design-inspiration.png" alt="" />
+            </div>
+
+            <div
+              class="card card-one card-1 front-card hidden-right-sm"
+              id="card1"
+              onclick="moveCard()"
+            >
+              <div class="corner">
+                <div class="arrow">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
+              <img src="/assets/simplistic-design-inspiration.png" alt="" />
+            </div>
+
+            <div class="title">
+              <h6 class="me-1 hidden-right">
+                a project for the school gaming club
+              </h6>
+              <h1 class="hidden-right first-word">Tournament</h1>
+              <h1 class="hidden-right second-word">Organizer</h1>
+              <hr class="hidden-right" />
+              <p class="hidden-right">
+                A desktop app that keeps track of players and creates
+                skill-determined brackets to run 5v5 game tournaments.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="two">
+          <div class="grid">
+            <div class="title">
+              <h1 class="hidden-left">Videogame Remake</h1>
+              <h6 class="hidden-left">Teamfight Tactics</h6>
+            </div>
+
+            <div class="container-fluid card-container">
+              <img
+                class="card card-two"
+                src="../assets/tft/tft screen.png"
+                alt=""
+              />
+              <video class="card card-two videoplayer" autoplay muted loop>
+                <source
+                  src="../assets/tft/darius-vs-sivir.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <video class="card card-two videoplayer" autoplay muted loop>
+                <source
+                  src="../assets/tft/syndra-level-up.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <video class="card card-two videoplayer" autoplay muted loop>
+                <source
+                  src="../assets/tft/vi+veigar+varus.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </section>
+        <section class="three">
+          <h1 class="hidden-right">Third Page</h1>
+        </section>
+        <section class="four">
+          <h1 class="hidden-left">Fourth Page</h1>
+        </section>
       </div>
-    </nav>
-    <!-- End of Navbar -->
-
-    <div class="container-fluid page">
-      <section class="one">
-        <div class="container-fluid grid">
-          <div
-            class="card card-3 back-card hidden-right-sm"
-            id="card3"
-            onclick="moveCard()"
-          >
-            <div class="corner">
-              <div class="arrow">
-                <i class="fa-solid fa-share"></i>
-              </div>
-            </div>
-            <img src="/assets/simplistic-design-inspiration.png" alt="" />
-          </div>
-
-          <div
-            class="card card-2 middle-card hidden-right-sm"
-            id="card2"
-            onclick="moveCard()"
-          >
-            <div class="corner">
-              <div class="arrow">
-                <i class="fa-solid fa-share"></i>
-              </div>
-            </div>
-            <img src="/assets/simplistic-design-inspiration.png" alt="" />
-          </div>
-
-          <div
-            class="card card-1 front-card hidden-right-sm"
-            id="card1"
-            onclick="moveCard()"
-          >
-            <div class="corner">
-              <div class="arrow">
-                <i class="fa-solid fa-share"></i>
-              </div>
-            </div>
-            <img src="/assets/simplistic-design-inspiration.png" alt="" />
-          </div>
-
-          <div class="title">
-            <h6 class="me-1 hidden-right">
-              a project for the school gaming club
-            </h6>
-            <h1 class="hidden-right">Tournament Organizer</h1>
-            <hr class="hidden-right" />
-            <p class="hidden-right">
-              A desktop app that keeps track of players and creates
-              skill-determined brackets to run 5v5 game tournaments.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="two">
-        <h1 class="hidden-left">Cool animations incoming</h1>
-      </section>
-      <section class="three">
-        <h1 class="hidden-right">Third Page</h1>
-      </section>
-      <section class="four">
-        <h1 class="hidden-left">Fourth Page</h1>
-      </section>
     </div>
   </body>
 </html>

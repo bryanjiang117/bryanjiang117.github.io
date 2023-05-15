@@ -4,6 +4,10 @@ var darkNavy = styles.getPropertyValue("--d-navy");
 var aqua = styles.getPropertyValue("--aqua");
 var gray = styles.getPropertyValue("--gray");
 
+
+var page = document.getElementById('page');
+page.style.right = page.clientWidth - page.offsetWidth + "px";
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -12,7 +16,7 @@ const observer = new IntersectionObserver(
         entry.target.classList.add("show");
       } else {
         entry.target.classList.remove("show");
-        if (entry.target.classList.contains("card")) {
+        if (entry.target.classList.contains("card-one")) {
           resetCard(entry.target);
         }
       }
@@ -23,12 +27,12 @@ const observer = new IntersectionObserver(
   }
 );
 const hiddenElements = document.querySelectorAll(
-  ".hidden-left, .hidden-left-sm, .hidden-right, .hidden-right-sm"
+  ".hidden-left, .hidden-left-sm, .hidden-right, .hidden-right-sm, .hidden-right-lg"
 );
 hiddenElements.forEach((el) => observer.observe(el));
 
 function moveCard() {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".card-one");
   for (let i = 0; i < 3; i++) {
     const classList = cards[i].classList;
     classList.remove("short-delay");
@@ -53,7 +57,7 @@ function moveCard() {
 }
 
 function spreadCards() {
-  const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".card-one");
   for (let i = 0; i < 3; i++) {
     const classList = cards[i].classList;
     classList.remove("no-delay");
@@ -74,13 +78,13 @@ function resetCard(card) {
   classList.remove("front-card");
   classList.remove("middle-card");
   classList.remove("back-card");
-  classList.remove('short-delay');
-  classList.remove('long-delay');
+  classList.remove("short-delay");
+  classList.remove("long-delay");
   if (classList.contains("card-1")) {
     classList.add("front-card");
   } else if (classList.contains("card-2")) {
     classList.add("middle-card");
-  } else if (classList.contains('card-3')) {
+  } else if (classList.contains("card-3")) {
     classList.add("back-card");
   }
 }

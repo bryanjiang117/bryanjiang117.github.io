@@ -11,19 +11,25 @@
   --d-gray: rgb(40, 40, 40);
 }
 
-/* General */
+/************************** General **************************/
 body {
   font-family: var(--font);
   background-color: var(--d-navy);
   user-select: none;
+  overflow: hidden;
 }
 
 .container-fluid {
   padding: 0;
 }
 
+.full-container {
+  overflow: hidden;   
+}
+
 .page {
   height: 100vh;
+  position: absolute;
   scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
@@ -34,16 +40,15 @@ section {
   color: white;
 }
 
-/* Navbar */
+/************************** Navbar **************************/
 .navbar {
   background-color: var(--d-navy);
   height: 10vh;
   width: 100%;
-  position: fixed;
-  z-index: 1;
+  /* z-index: 100; */
   font-size: large;
   font-weight: 300;
-  box-shadow: 0 0.2rem 1rem rgba(20, 20, 20, 0.4);
+  /* box-shadow: 0 0.2rem 1rem rgba(20, 20, 20, 0.4); */
 }
 
 .navbar-brand a {
@@ -86,32 +91,32 @@ section {
   text-shadow: 0 0 1rem var(--b-aqua);
 }
 
-/* Page One */
+/************************** Page One **************************/
 .one {
   background-color: var(--d-navy) !important;
 }
 
-.grid {
+.one .grid {
   display: grid;
   grid-template-columns: 1fr 40vw 35vw 1fr;
-  grid-template-rows: 15vh 5vh 65vh 1fr;
+  grid-template-rows: 5vh 5vh 65vh 1fr;
   column-gap: 3vw;
 }
 
-.card {
+.card-one {
   grid-area: 3 / 2 / span 1 / span 1;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.279);
   overflow: hidden;
   border: none;
 }
 
-.card:hover > img {
+.card-one:hover > img {
   margin: 0rem 0rem;
   margin-top: auto;
   border-radius: 5px;
 }
 
-.card:hover > .corner {
+.card-one:hover > .corner {
   background-color: var(--d-navy);
   display: inline-block;
   height: 20%;
@@ -173,7 +178,7 @@ section {
   transition-delay: 300ms !important;
 }
 
-.card img {
+.card-one img {
   margin: 1rem 1rem;
   margin-top: auto;
   border-radius: 5px;
@@ -207,35 +212,78 @@ section {
   margin: 5vh 0;
   margin-left: 5vh;
   color: var(--aqua);
-  font-size: 3vh;
 }
 
 .one h6 {
-  transition-delay: 100ms !important;
-  transition: all 0.5s;
+  transition-delay: 200ms !important;
+}
+
+.one h1 {
+  font-size: 5rem;
+}
+
+.one .first-word {
+  transition-delay: 150ms;
+}
+
+.one .second-word {
+  transition-delay: 100ms;
 }
 
 .one hr {
   margin: 1.5rem 0;
   transition-delay: 500ms !important;
-  transition: all 0.5s;
 }
 
 .one p {
   font-size: 1rem;
-  transition-delay: 100ms !important;
-  transition: all 0.5s;
+  transition-delay: 50ms !important;
 }
 
-/* Page Two */
+/************************** Page Two **************************/
 .two {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-/* Page Three */
+.two .grid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 30vh 65vh 1fr;
+  grid-template-columns: 1fr 80vw 1fr;
+}
+
+.card-container {
+  grid-area: 2 / 2 / span 1 / span 1;
+  display: flex;
+}
+
+.card-two {
+  width: 20vw;
+  margin: 0 2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.two .title {
+  color: var(--aqua);
+  margin-top: 3rem;
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.two h1 {
+}
+
+.two h6 {
+}
+
+.two img {
+  width: 20vw;
+}
+
+.videoplayer {
+}
+
+/************************** Page Three **************************/
 .three {
   display: flex;
   flex-direction: column;
@@ -243,7 +291,7 @@ section {
   align-items: center;
 }
 
-/* Page Four  */
+/************************** Page Four  **************************/
 .four {
   display: flex;
   flex-direction: column;
@@ -251,7 +299,7 @@ section {
   align-items: center;
 }
 
-/* Animations */
+/************************** Animations **************************/
 .hidden-left-sm {
   opacity: 0;
   transform: translateX(-0.7rem);
@@ -272,8 +320,8 @@ section {
 
 .hidden-right {
   opacity: 0;
-  transform: translateX(10%);
-  filter: blur(2px);
+  transform: translateX(3rem);
+  filter: blur(3px);
 }
 
 .show {

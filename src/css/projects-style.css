@@ -130,17 +130,17 @@ section {
 
 .one .card-1 {
   background-color: var(--navy);
-  transition-delay: 600ms !important;
+  transition-delay: 600ms;
 }
 
 .one .card-2 {
   background-color: var(--gray);
-  transition-delay: 750ms !important;
+  transition-delay: 750ms;
 }
 
 .one .card-3 {
   background-color: var(--d-gray);
-  transition-delay: 900ms !important;
+  transition-delay: 900ms;
 }
 
 .front-card {

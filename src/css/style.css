@@ -3,12 +3,12 @@
   --bg-color: rgb(255, 247, 212);
 }
 
-.container-fluid {
-  padding: 0;
+body {
+  overflow-x: hidden;
 }
 
-.no-overflow {
-  overflow: hidden;
+.container-fluid {
+  padding: 0;
 }
 
 .type-font {
@@ -96,6 +96,7 @@
 }
 
 /* Fixed Background */
+
 .fixed {
   position: fixed;
   z-index: -999 !important;
@@ -106,10 +107,7 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-}
-
-.sunset {
-  background-image: url("../../assets/sunset-background-edited.png");
+  background-repeat: no-repeat;
 }
 
 .fixed-background {
@@ -125,9 +123,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   z-index: -999 !important;
+}
+
+.sunset-top {
+  background-image: url("../../assets/sunset-background-top.png");
+}
+
+.sunset-bot {
+  background-image: url("../../assets/sunset-background-bot.png");
 }
 
 /* Footer */
@@ -153,7 +159,7 @@ footer li {
 }
 
 footer .btn {
-  color: rgb(255, 247, 212);
+  color: rgb(255, 247, 212) !important;
   font-size: 4vh;
 }
 

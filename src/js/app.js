@@ -4,9 +4,9 @@ var darkNavy = styles.getPropertyValue("--d-navy");
 var aqua = styles.getPropertyValue("--aqua");
 var gray = styles.getPropertyValue("--gray");
 
-
-var page = document.getElementById('page');
-page.style.right = page.clientWidth - page.offsetWidth + "px";
+var page = document.getElementById("page");
+page.style.right = page.clientWidth - page.offsetWidth + "px"; //shift page to the right to remove vertical scrollbar
+page.style.width = page.offsetWidth + "px"; //increase page width to accomodate for the shift
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -87,6 +87,20 @@ function resetCard(card) {
   } else if (classList.contains("card-3")) {
     classList.add("back-card");
   }
+}
+
+var cardTwos = document.querySelectorAll(".card-two");
+for (let i = 0; i < cardTwos.length; i++) {
+  cardTwos[i].onmouseover = function () {
+    for (let j = 0; j < i; j++) {
+      cardTwos[j].classList.add("shift");
+    }
+  };
+  cardTwos[i].onmouseout = function () {
+    for (let j = 0; j < i; j++) {
+      cardTwos[j].classList.remove("shift");
+    }
+  };
 }
 
 // const navbar = document.getElementById("navbar");

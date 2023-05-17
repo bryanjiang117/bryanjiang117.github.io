@@ -6,7 +6,7 @@ var gray = styles.getPropertyValue("--gray");
 
 var page = document.getElementById("page");
 page.style.right = page.clientWidth - page.offsetWidth + "px"; //shift page to the right to remove vertical scrollbar
-page.style.width = page.offsetWidth + "px"; //increase page width to accomodate for the shift
+page.style.width = 2 * page.offsetWidth - page.clientWidth + "px"; //increase page width to accomodate for the shift
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -27,7 +27,7 @@ const observer = new IntersectionObserver(
   }
 );
 const hiddenElements = document.querySelectorAll(
-  ".hidden-left, .hidden-left-sm, .hidden-right, .hidden-right-sm, .hidden-right-lg"
+  ".hidden-left, .hidden-left-sm, .hidden-right, .hidden-right-sm, .hidden-top"
 );
 hiddenElements.forEach((el) => observer.observe(el));
 
@@ -92,13 +92,15 @@ function resetCard(card) {
 var cardTwos = document.querySelectorAll(".card-two");
 for (let i = 0; i < cardTwos.length; i++) {
   cardTwos[i].onmouseover = function () {
+    this.play();
     for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.add("shift");
+      cardTwos[j].classList.add("shift-left");
     }
   };
   cardTwos[i].onmouseout = function () {
+    this.pause();
     for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.remove("shift");
+      cardTwos[j].classList.remove("shift-left");
     }
   };
 }

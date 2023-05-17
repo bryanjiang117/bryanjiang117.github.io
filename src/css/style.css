@@ -19,8 +19,9 @@ body {
 .navbar {
   background-color: var(--bg-color);
   width: 100%;
+  padding: 1rem 0;
   position: fixed;
-  font-size: large;
+  font-size: 1.2rem;
   font-weight: 300;
   box-shadow: 0 0 1rem rgb(76, 61, 61, 0.2);
 }
@@ -59,15 +60,17 @@ body {
   justify-content: center;
 }
 
-.header {
-  font-size: 10vh;
+header {
+  font-size: 8rem;
   font-weight: 500;
   /* text-shadow: 0 0.1rem 0.3rem rgba(188, 149, 29, 0.5); */
   padding: 1rem 0;
 }
 
 .text-small {
-  font-size: 1.6vh;
+  /* text-align: center; */
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
   font-weight: 200;
 }
 
@@ -77,7 +80,7 @@ body {
 }
 
 .moon {
-  width: 75%;
+  width: 60%;
 }
 
 .header2 {
@@ -112,7 +115,7 @@ body {
 
 .fixed-background {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   z-index: 1000 !important;
   overflow: hidden;
@@ -129,11 +132,11 @@ body {
 }
 
 .sunset-top {
-  background-image: url("../../assets/sunset-background-top.png");
+  background-image: url("../../assets/sunset-background-edited.png");
 }
 
 .sunset-bot {
-  background-image: url("../../assets/sunset-background-bot.png");
+  background-image: url("../../assets/sunset-background-edited.png");
 }
 
 /* Footer */

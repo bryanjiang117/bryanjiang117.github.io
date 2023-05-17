@@ -16,7 +16,7 @@ body {
   font-family: var(--font);
   background-color: var(--d-navy);
   user-select: none;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .container-fluid {
@@ -47,7 +47,7 @@ section {
   background-color: var(--d-navy);
   height: 10vh;
   width: 100%;
-  /* z-index: 100; */
+  padding: 0rem 0;
   font-size: large;
   font-weight: 300;
   /* box-shadow: 0 0.2rem 1rem rgba(20, 20, 20, 0.4); */
@@ -360,7 +360,7 @@ section {
 
 .hidden-top {
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(-100%);
   filter: blur(2px);
 }
 

@@ -234,7 +234,7 @@ section {
   transition-delay: 50ms;
 }
 
-/************************** Page Two **************************/
+/************************** Page Two **************************/ /*ALTERNATIVE IDEA IS TO HAVE THE 3 COLUMNS EACH WITH THE COOL BOX OPENING ANIMATION */
 .two {
 }
 
@@ -257,7 +257,7 @@ section {
   position: relative;
   min-width: 25rem;
   border: none;
-  border: 5px solid var(--navy);
+  /* border: 5px solid var(--navy); */
   border-radius: 5px;
   box-shadow: 2rem 0 2rem rgb(28, 37, 65, 0.6);
   transition: all 0.3s;

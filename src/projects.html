@@ -46,6 +46,7 @@
 
     <div class="full-container">
       <div class="container-fluid page" id="page">
+        <!------------------------------- Page One ------------------------------->
         <section class="one">
           <!-- Navbar -->
           <nav class="navbar navbar-expand-sm" onclick="navbarColor">
@@ -133,34 +134,65 @@
             </div>
           </div>
         </section>
+        <!------------------------------- End of Page One ------------------------------->
+
+        <!------------------------------- Page Two ------------------------------->
         <section class="two">
-          <div class="grid">
-            <div class="title">
+          <div class="container-fluid grid">
+            <header>
               <h1 class="hidden-top">Videogame Remake</h1>
               <h6 class="hidden-top">Teamfight Tactics</h6>
+              <hr>
+            </header>
+            <div class="col col1">
+              <p>
+                I attempted to recreate Teamfight Tactics, a popular game by
+                Riot Games, using Java GUI. Over 2 months, my friend Eric and I
+                wrote thousands of lines of code collaborating through Github
+                and learning as we go.
+              </p>
+              <video
+                src="../assets/tft/darius-vs-sivir.mp4"
+                class="videoplayer"
+                type="video/mp4"
+                muted
+                loop
+              ></video>
             </div>
-            <div class="container-fluid card-container">
-              <video class="card card-two card-1 videoplayer hidden-left" muted loop>
-                <source
-                  src="../assets/tft/vi+veigar+varus.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <video class="card card-two card-2 videoplayer hidden-left" muted loop>
-                <source
-                  src="../assets/tft/syndra-level-up.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <video class="card card-two card-3 videoplayer hidden-left" muted loop>
-                <source
-                  src="../assets/tft/darius-vs-sivir.mp4"
-                  type="video/mp4"
-                />
-              </video>
+            <div class="col col2">
+              <p>
+                I replicated the main gameplay: 20+ characters with unique
+                stats; rarities; and uniquely animated abilities, a fixed
+                character pool, both character and player level-up system, and
+                of course the signature auto-battle board.
+              </p>
+              <video
+                src="../assets/tft/syndra-level-up.mp4"
+                class="videoplayer col2"
+                type="video/mp4"
+                muted
+                loop
+              ></video>
+            </div>
+            <div class="col col3">
+              <p>
+                I applied OOP concepts I learned in class as well as techniques
+                I discovered scowering web forums. Despite the messily formatted
+                code and a handful of mysterious bugs, this was the first time I
+                felt such excitement creating something.
+              </p>
+              <video
+                src="../assets/tft/vi+veigar+varus.mp4"
+                class="videoplayer col3"
+                type="video/mp4"
+                muted
+                loop
+              ></video>
             </div>
           </div>
         </section>
+        <!------------------------------- End of Page Two ------------------------------->
+
         <section class="three">
           <h1 class="hidden-right">Third Page</h1>
         </section>

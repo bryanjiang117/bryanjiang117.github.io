@@ -89,19 +89,13 @@ function resetCard(card) {
   }
 }
 
-var cardTwos = document.querySelectorAll(".card-two");
-for (let i = 0; i < cardTwos.length; i++) {
-  cardTwos[i].onmouseover = function () {
+var videoplayers = document.querySelectorAll(".videoplayer");
+for (let i = 0; i < videoplayers.length; i++) {
+  videoplayers[i].onmouseover = function () {
     this.play();
-    for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.add("shift-left");
-    }
   };
-  cardTwos[i].onmouseout = function () {
+  videoplayers[i].onmouseout = function () {
     this.pause();
-    for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.remove("shift-left");
-    }
   };
 }
 

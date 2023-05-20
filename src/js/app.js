@@ -98,18 +98,3 @@ for (let i = 0; i < videoplayers.length; i++) {
     this.pause();
   };
 }
-
-// const navbar = document.getElementById("navbar");
-// window.addEventListener(
-//   "scroll",
-//   function () {
-//     var scroll = self.pageYOffset;
-//     var height = $(window).height();
-//     if (scroll < height) {
-//       navbar.style.backgroundColor = darkNavy;
-//     } else {
-//       navbar.style.backgroundColor = gray;
-//     }
-//   },
-//   true
-// );

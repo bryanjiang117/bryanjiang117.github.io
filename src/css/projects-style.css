@@ -242,7 +242,7 @@ section {
   display: grid;
   grid-template-rows: fit-content(15rem) fit-content(50rem) 1fr;
   grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
-  column-gap: 2rem; 
+  column-gap: 2rem;
 }
 
 .two header {
@@ -251,8 +251,13 @@ section {
   grid-area: 1 / 2 / span 1 / span 3;
 }
 
+.two h1 {
+  transition-delay: 200ms;
+}
+
 .two h6 {
   margin: 1rem 0;
+  transition-delay: 400ms;
 }
 
 .two hr {
@@ -275,9 +280,28 @@ section {
   grid-area: 2 / 4 / span 1 / span 1;
 }
 
+.col > p {
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .videoplayer {
   width: 100%;
   border-radius: 5px;
+}
+
+.champ-descrip {
+  background-color: var(--navy);
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+.champ-descrip p {
+  padding: 5px 5px;
+}
+
+b {
+  color: var(--aqua);
 }
 
 .card-two:hover {
@@ -333,7 +357,7 @@ section {
 
 .hidden-top {
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(-1rem);
   filter: blur(2px);
 }
 

@@ -98,3 +98,16 @@ for (let i = 0; i < videoplayers.length; i++) {
     this.pause();
   };
 }
+
+var cols = document.querySelectorAll(".col");
+for (let i = 0; i < cols.length; i++) {
+  var colContent = cols[i].getElementsByClassName("col-content")[0];
+  colContent.onmouseenter = function () {
+    this.classList.remove("box-close");
+    this.classList.add("box-open");
+  };
+  colContent.onmouseout = function () {
+    this.classList.remove("box-open");
+    this.classList.add("box-close");
+  };
+}

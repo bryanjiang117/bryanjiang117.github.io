@@ -101,13 +101,13 @@ for (let i = 0; i < videoplayers.length; i++) {
 
 var cols = document.querySelectorAll(".col");
 for (let i = 0; i < cols.length; i++) {
-  var colContent = cols[i].getElementsByClassName("col-content")[0];
-  colContent.onmouseenter = function () {
-    this.classList.remove("box-close");
-    this.classList.add("box-open");
-  };
-  colContent.onmouseout = function () {
-    this.classList.remove("box-open");
-    this.classList.add("box-close");
-  };
+  const colContent = cols[i].getElementsByClassName("col-content")[0];
+  cols[i].addEventListener("mouseenter", () => {
+    colContent.classList.add("box-open");
+    colContent.classList.remove("box-close");
+  });
+  cols[i].addEventListener("mouseleave", () => {
+    colContent.classList.remove("box-open");
+    colContent.classList.add("box-close");
+  });
 }

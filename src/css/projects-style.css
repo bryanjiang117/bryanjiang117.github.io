@@ -12,8 +12,8 @@
 }
 
 @font-face {
-    font-family: pixel;
-    src: url("../../assets/pixel-font.otf") format("opentype");
+  font-family: pixel;
+  src: url("../../assets/pixel-font.otf") format("opentype");
 }
 
 /************************** General **************************/
@@ -297,6 +297,8 @@ section {
 }
 
 .col-content {
+  height: 100%;
+  width: 100%;
   background-color: var(--d-navy);
   opacity: 0;
 }
@@ -326,14 +328,6 @@ section {
 
 b {
   color: var(--aqua);
-}
-
-.box-open {
-  animation: box-open 1s forwards;
-}
-
-.box-close {
-
 }
 
 .two img {
@@ -403,6 +397,14 @@ b {
   filter: blur(2px);
 }
 
+.box-open {
+  animation: box-open 1s forwards;
+}
+
+.box-close {
+  animation: box-close 1s forwards;
+}
+
 @keyframes box-open {
   0% {
     opacity: 1;
@@ -415,5 +417,20 @@ b {
   100% {
     opacity: 1;
     transform: scale(100%, 100%);
+  }
+}
+
+@keyframes box-close {
+  0% {
+    opacity: 1;
+    transform: scale(100%, 100%);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(100%, 1%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0%, 1%);
   }
 }

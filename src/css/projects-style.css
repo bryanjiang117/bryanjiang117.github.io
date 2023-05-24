@@ -245,14 +245,14 @@ section {
 
 .two .grid {
   display: grid;
-  grid-template-rows: fit-content(15rem) fit-content(50rem) 1fr;
+  grid-template-rows: fit-content(10rem) fit-content(30rem) 1fr;
   grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
   column-gap: 2rem;
 }
 
 .two header {
   color: var(--aqua);
-  margin-top: 3rem;
+  margin-top: 4rem;
   grid-area: 1 / 2 / span 1 / span 3;
 }
 
@@ -266,7 +266,7 @@ section {
 }
 
 .two hr {
-  margin: 2.5rem 0;
+  margin-top: 3.5rem;
 }
 
 .col {
@@ -288,10 +288,12 @@ section {
 
 .letter {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: min(50cqh, 50cqw);
   font-family: pixel;
   z-index: -1;
 }
@@ -304,7 +306,7 @@ section {
 }
 
 .col-content > p {
-  text-align: left;
+  text-align: justify;
   color: var(--navy);
   font-weight: 600;
 }
@@ -407,7 +409,7 @@ b {
 
 @keyframes box-open {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: scale(0%, 1%);
   }
   50% {
@@ -430,7 +432,7 @@ b {
     transform: scale(100%, 1%);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: scale(0%, 1%);
   }
 }

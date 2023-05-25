@@ -112,9 +112,10 @@ section {
 
 .card-one {
   grid-area: 3 / 2 / span 1 / span 1;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.279);
+  box-shadow: -0.5rem 0.5rem 0.5rem rgb(28, 37, 65, 0.4);
   overflow: hidden;
   border: none;
+  border-radius: 0.3rem;
 }
 
 .card-one:hover > .corner {
@@ -128,26 +129,25 @@ section {
 }
 
 .one .card-1 {
-  background-color: var(--navy);
   transition-delay: 600ms;
 }
 
 .one .card-2 {
-  background-color: var(--gray);
   transition-delay: 750ms;
 }
 
 .one .card-3 {
-  background-color: var(--d-gray);
   transition-delay: 900ms;
 }
 
 .front-card {
+  background-color: #4987c1;
   z-index: 3;
   transition-timing-function: ease-out;
 }
 
 .middle-card {
+  background-color: rgb(47, 86, 122);
   position: relative;
   top: 0.5rem;
   right: 0.7rem;
@@ -157,6 +157,7 @@ section {
 }
 
 .back-card {
+  background-color: #1d3347;
   position: relative;
   top: 1rem;
   right: 1.4rem;
@@ -178,8 +179,8 @@ section {
 }
 
 .card-one img {
-  margin: 1rem 1rem;
-  margin-top: auto;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
   border-radius: 5px;
   transition: all 0.5s;
 }
@@ -197,12 +198,19 @@ section {
 }
 
 .card .arrow {
-  color: var(--aqua);
+  color: #4987c1;
   display: block;
   position: absolute;
   top: 60%;
   left: 25%;
   /* font-size:  */
+}
+
+.card-one h1 {
+  color: var(--navy);
+  margin: auto 0;
+  text-align: center;
+  font-size: 2.5cqw !important;
 }
 
 .one .title {

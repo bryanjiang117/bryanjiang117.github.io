@@ -89,33 +89,38 @@ function resetCard(card) {
   }
 }
 
-var cardTwos = document.querySelectorAll(".card-two");
-for (let i = 0; i < cardTwos.length; i++) {
-  cardTwos[i].onmouseover = function () {
+var videoplayers = document.querySelectorAll(".videoplayer");
+for (let i = 0; i < videoplayers.length; i++) {
+  videoplayers[i].onmouseover = function () {
     this.play();
-    for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.add("shift-left");
-    }
   };
-  cardTwos[i].onmouseout = function () {
+  videoplayers[i].onmouseout = function () {
     this.pause();
-    for (let j = 0; j < i; j++) {
-      cardTwos[j].classList.remove("shift-left");
-    }
   };
 }
 
-// const navbar = document.getElementById("navbar");
-// window.addEventListener(
-//   "scroll",
-//   function () {
-//     var scroll = self.pageYOffset;
-//     var height = $(window).height();
-//     if (scroll < height) {
-//       navbar.style.backgroundColor = darkNavy;
-//     } else {
-//       navbar.style.backgroundColor = gray;
-//     }
-//   },
-//   true
-// );
+var cols = document.querySelectorAll(".col");
+for (let i = 0; i < cols.length; i++) {
+  const colContent = cols[i].getElementsByClassName("col-content")[0];
+  const letter = cols[i].getElementsByClassName("letter")[0];
+  cols[i].addEventListener("mouseenter", () => {
+    letter.classList.add("box-close");
+    letter.classList.remove("box-open");
+    setTimeout(openContent, 1000, colContent);
+  });
+  cols[i].addEventListener("mouseleave", () => {
+    colContent.classList.remove("box-open");
+    colContent.classList.add("box-close");
+    setTimeout(openLetter, 1000, letter);
+  });
+}
+
+function openContent(colContent) {
+  colContent.classList.add("box-open");
+  colContent.classList.remove("box-close");
+}
+
+function openLetter(letter) {
+  letter.classList.remove("box-close");
+  letter.classList.add("box-open");
+}
